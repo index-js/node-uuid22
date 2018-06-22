@@ -1,0 +1,27 @@
+{
+  "name": "uuid22",
+  "version": "1.0.0",
+  "description": "uuid22",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsCreator/uuid22.git"
+  },
+  "keywords": [
+    "uuid",
+    "uuid22"
+  ],
+  "author": "i@yangl.in",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsCreator/uuid22/issues"
+  },
+  "homepage": "https://github.com/jsCreator/uuid22#readme",
+  "dependencies": {
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {}
+}
