@@ -1,5 +1,6 @@
 const uuid = require('uuid')
-const uuidv4 = require('uuid/v4')
+const uuidv4 = require('uuid/v1')
+const uuid_parse = require('uuid-parse')
 
 
 const generate = () => {
@@ -23,17 +24,21 @@ const str2buf = string => {
   return new Buffer(str, 'base64')
 }
 
-// const fromUUID = value => {
-//   let buffer = new Buffer(16)
-//   uuid.parse(value, buffer)
+const from_uuid = value => {
+  let buffer = new Buffer(16)
+  uuid_parse.parse(value, buffer)
 
-//   return buf2str(buffer)
-// }
+  return buf2str(buffer)
+}
 
-// const toUUID = value => {
-//   let buffer = str2buf(value)
-//   return uuid.unparse(buffer)
-// }
+const to_uuid = string => {
+  let buffer = str2buf(string)
+  return uuid_parse.unparse(buffer)
+}
 
 
-module.exports = generate
+module.exports = {
+  generate,
+  from_uuid,
+  to_uuid
+}
