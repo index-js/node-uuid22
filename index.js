@@ -3,7 +3,7 @@ const uuidv4 = require('uuid/v1')
 const uuid_parse = require('uuid-parse')
 
 
-const generate = () => {
+const create = () => {
   let buffer = new Buffer(16)
   uuidv4(null, buffer, 0)
 
@@ -24,21 +24,21 @@ const str2buf = string => {
   return new Buffer(str, 'base64')
 }
 
-const from_uuid = value => {
+const encode = value => {
   let buffer = new Buffer(16)
   uuid_parse.parse(value, buffer)
 
   return buf2str(buffer)
 }
 
-const to_uuid = string => {
+const decode = string => {
   let buffer = str2buf(string)
   return uuid_parse.unparse(buffer)
 }
 
 
 module.exports = {
-  generate,
-  from_uuid,
-  to_uuid
+  create,
+  encode,
+  decode
 }
