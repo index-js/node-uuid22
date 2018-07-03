@@ -1,11 +1,11 @@
 const uuid = require('uuid')
-const uuidv4 = require('uuid/v1')
+const uuidv1 = require('uuid/v1')
 const uuid_parse = require('uuid-parse')
 
 
 const create = () => {
   let buffer = new Buffer(16)
-  uuidv4(null, buffer, 0)
+  uuidv1(null, buffer, 0)
 
   return buf2str(buffer)
 }
