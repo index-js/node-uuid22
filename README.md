@@ -30,7 +30,7 @@ assert(id, uuid22.encode(uuid), 'should equal')
 
 ## Authors
 
-**Yanglin** ([i@yangl.in](mail@yanglin.me))
+**Yanglin** ([i@yangl.in](mailto:mail@yanglin.me))
 
 
 ## License
