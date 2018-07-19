@@ -24,7 +24,7 @@ decode / encode
 let uuid = uuid22.decode(id)
 // console.log(uuid)
 
-assert(id, uuid22.encode(uuid), 'should equal')
+assert.equal(id, uuid22.encode(uuid), 'uuid22.encode() should equal orgin')
 ```
 
 

@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsCreator/uuid22.git"
+    "url": "git+https://github.com/index-js/node-uuid22.git"
   },
   "keywords": [
     "uuid",
     "uuid22"
   ],
-  "author": "i@yangl.in",
+  "author": "Yanglin(mail@yanglin.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jsCreator/uuid22/issues"
+    "url": "https://github.com/index-js/node-uuid22/issues"
   },
-  "homepage": "https://github.com/jsCreator/uuid22#readme",
+  "homepage": "http://jslang.org",
   "dependencies": {
     "uuid": "^3.2.1",
     "uuid-parse": "^1.0.0"
