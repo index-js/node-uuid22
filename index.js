@@ -40,5 +40,6 @@ const decode = string => {
 module.exports = {
   create,
   encode,
-  decode
+  decode,
+  uuid
 }

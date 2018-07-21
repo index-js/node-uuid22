@@ -8,3 +8,6 @@ let uuid = uuid22.decode(id)
 console.log(uuid)
 
 assert.equal(id, uuid22.encode(uuid), 'uuid22.encode() should equal orgin')
+
+// No more require uuid
+console.log(uuid22.uuid)

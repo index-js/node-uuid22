@@ -27,6 +27,17 @@ let uuid = uuid22.decode(id)
 assert.equal(id, uuid22.encode(uuid), 'uuid22.encode() should equal orgin')
 ```
 
+## API
+uuid22 {
+  create,
+  encode,
+  decode,
+  uuid
+}
+``` js
+// No more require uuid
+console.log(uuid22.uuid)
+```
 
 ## Authors
 
