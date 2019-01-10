@@ -1,11 +1,12 @@
-const uuid = require('uuid')
 const uuidv1 = require('uuid/v1')
+const uuidv4 = require('uuid/v4')
+const uuidv5 = require('uuid/v5')
 const uuid_parse = require('uuid-parse')
 
 
 const create = () => {
-  let buffer = new Buffer(16)
-  uuidv1(null, buffer, 0)
+  let buffer = Buffer.alloc(16)
+  uuidv1(null, buffer)
 
   return buf2str(buffer)
 }
@@ -21,11 +22,11 @@ const buf2str = buffer => {
 const str2buf = string => {
   let str = string.replace(/-/g, '/').replace(/_/g, '+') + '=='
   
-  return new Buffer(str, 'base64')
+  return Buffer.from(str, 'base64')
 }
 
 const encode = value => {
-  let buffer = new Buffer(16)
+  let buffer = Buffer.alloc(16)
   uuid_parse.parse(value, buffer)
 
   return buf2str(buffer)
@@ -41,5 +42,7 @@ module.exports = {
   create,
   encode,
   decode,
-  uuid
+  uuidv1,
+  uuidv4,
+  uuidv5
 }

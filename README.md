@@ -14,29 +14,30 @@ $ npm i uuid22
 ## Usage
 
 Create a short uuid22
+> const uuid22 = require('uuid22')
 ``` js
-var uuid22 = require('uuid22');
 let id = uuid22.create()
+// 3esn_9mgRiS_TUYVBi2u1A
 // "id" length is 22
 ```
 decode / encode
 ``` js
 let uuid = uuid22.decode(id)
-// console.log(uuid)
-
-assert.equal(id, uuid22.encode(uuid), 'uuid22.encode() should equal orgin')
+let orgin = uuid22.encode(uuid)
+assert.equal(id, orgin, 'uuid22.encode() should equal orgin')
 ```
 
 ## API
+``` js
+// No more require uuid
 uuid22 {
   create,
   encode,
   decode,
-  uuid
+  uuidv1,
+  uuidv4,
+  uuidv5
 }
-``` js
-// No more require uuid
-console.log(uuid22.uuid)
 ```
 
 ## Authors
