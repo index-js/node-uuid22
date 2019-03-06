@@ -13,14 +13,14 @@ const create = () => {
 
 const buf2str = buffer => {
   return buffer
-    .toString('base64')
+    .toString('base64')  // Same as Base64 URL in Java
+    .replace(/\+/g, '-') // replace '+' with '-'
+    .replace(/\//g, '_') // replace '/' with '_'
     .substring(0, 22)    // remove '=='
-    .replace(/\+/g, '_') // replace '+' with '_'
-    .replace(/\//g, '-') // replace '/' with '-'
 }
 
 const str2buf = string => {
-  let str = string.replace(/-/g, '/').replace(/_/g, '+') + '=='
+  let str = string.replace(/-/g, '+').replace(/_/g, '/') + '=='
   
   return Buffer.from(str, 'base64')
 }
